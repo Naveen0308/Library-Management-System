@@ -1,7 +1,7 @@
 // UserContext.js
 import { createContext, useState, useEffect } from 'react';
 
-const UserContext = createContext(null);
+const UserContext = createContext('');
 
 export const UserProvider = ({ children }) => {
   const [userId, setUserId] = useState(() => {
@@ -9,21 +9,21 @@ export const UserProvider = ({ children }) => {
     return storedUserId ? JSON.parse(storedUserId) : null;
   });
 
-  const [emailId, setEmailId] = useState(() => {
-    const storedEmailId = localStorage.getItem('emailId');
-    return storedEmailId ? JSON.parse(storedEmailId) : null;
-  });
+  // const [emailId, setEmailId] = useState(() => {
+  //   const storedEmailId = localStorage.getItem('emailId');
+  //   return storedEmailId ? JSON.parse(storedEmailId) : null;
+  // });
 
   useEffect(() => {
     localStorage.setItem('userId', JSON.stringify(userId));
   }, [userId]);
 
-  useEffect(() => {
-    localStorage.setItem('emailId', JSON.stringify(emailId));
-  }, [emailId]);
+  // useEffect(() => {
+  //   localStorage.setItem('emailId', JSON.stringify(emailId));
+  // }, [emailId]);
 
   return (
-    <UserContext.Provider value={{ userId, setUserId, emailId, setEmailId }}>
+    <UserContext.Provider value={{ userId, setUserId}}>
       {children}
     </UserContext.Provider>
   );

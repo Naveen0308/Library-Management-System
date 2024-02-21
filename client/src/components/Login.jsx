@@ -8,7 +8,7 @@ export const Login = () => {
 
     const navigate = useNavigate();
     const {userId, setUserId} = useContext(UserContext);
-    const {emailId,setEmailId}=useContext(UserContext);
+    //const {emailId,setEmailId}=useContext(UserContext);
     console.log(userId);
     const [formData, setFormData] = useState({
         email: '',
@@ -37,7 +37,7 @@ export const Login = () => {
                 console.log("logged in user data:", data);
                 
                 // Update the context with the logged-in user's email
-                setEmailId(data.email);
+                //setEmailId(data.email);
                 setUserId(data.userId);
                 navigate('/home');
             } else {
@@ -50,7 +50,7 @@ export const Login = () => {
 
 
     const handleAdminClick = () => {
-        navigate('/adminlogin');
+        navigate('/admin');
       };
     
       const handleSignupClick = () => {

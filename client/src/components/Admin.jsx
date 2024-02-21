@@ -7,7 +7,7 @@ import { useContext } from 'react';
 const Admin = () => {
   const navigate = useNavigate();
   let {userId,setUserId} = useContext(UserContext);
-  const {emailId,setEmailId}=useContext(UserContext);
+  //const {emailId,setEmailId}=useContext(UserContext);
   
   const handleAdminClick = () => {
     // Perform login logic
@@ -18,8 +18,8 @@ const Admin = () => {
     // Check if email and password are valid (replace this with your actual logic)
     if (enteredEmail === 'xyz@gmail.com' && enteredPassword === 'positivity') {
       // Redirect to the mainindex page
-      setEmailId("abc@gmail.com");
-      console.log(emailId);
+      //setEmailId("abc@gmail.com");
+      //console.log(emailId);
       navigate('/home');
     } else {
       // Display alert for invalid credentials
