@@ -20,7 +20,7 @@ export const Card1 = ({ book, bookId }) => {
 
   const handleDeleteBook = async () => {
     try {
-      const response = await axios.post(`https://library-management-system-fnmi.onrender.com/api/deleteBook/${bookId}`);
+      const response = await axios.post(`https://library-management-system-ako5.onrender.com/api/deleteBook/${bookId}`);
       console.log(response);
       // Force a complete reload, ignoring the cache
       window.location.reload(true);

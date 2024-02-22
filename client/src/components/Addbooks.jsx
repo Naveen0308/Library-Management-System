@@ -33,7 +33,7 @@ export default function Addbooks() {
     try {
       const { bookName, author, genre, publisher, published_year } = bookData;
   
-      const response = await axios.post(`https://library-management-system-fnmi.onrender.com/api/add-book`, {
+      const response = await axios.post(`https://library-management-system-ako5.onrender.com/api/add-book`, {
         bookName,
         author,
         genre,
