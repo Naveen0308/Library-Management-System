@@ -111,7 +111,7 @@ app.post('/api/add-book', async (req, res) => {
   app.get('/api/all-books', async (req, res) => {
     try {
       // Define the SQL query to fetch all books from the database
-      const sql = "SELECT title, author, genre, publisher,DATE_FORMAT(published_year, '%d-%m-%Y') as published_year FROM Books";
+      const sql = "SELECT id ,title, author, genre, publisher,DATE_FORMAT(published_year, '%d-%m-%Y') as published_year FROM Books";
   
       // Execute the query
       db.query(sql, (err, result) => {

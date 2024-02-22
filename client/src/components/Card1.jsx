@@ -10,7 +10,7 @@ import axios from 'axios';
 
 export const Card1 = ({ book, bookId }) => {
   const navigate = useNavigate();
-  console.log(book.id);
+  console.log(book);
   const { userId, setUserId } = useContext(UserContext);
   console.log(book.title, book.author, book.genre, book.publisher, book.published_year);
 
@@ -20,7 +20,7 @@ export const Card1 = ({ book, bookId }) => {
 
   const handleDeleteBook = async () => {
     try {
-      const response = await axios.post(`http://localhost:8081/api/deleteBook/${bookId}`);
+      const response = await axios.post(`https://library-management-system-fnmi.onrender.com//api/deleteBook/${bookId}`);
       console.log(response);
       // Force a complete reload, ignoring the cache
       window.location.reload(true);

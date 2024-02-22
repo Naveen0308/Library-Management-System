@@ -43,7 +43,7 @@ export default function Signup() {
       }
   
       // Send a POST request to the backend API for signup
-      const response = await fetch(`http://localhost:8081/api/signup`, {
+      const response = await fetch(`https://library-management-system-fnmi.onrender.com//api/signup`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -74,7 +74,7 @@ export default function Signup() {
   return (
     <div>
       <h5 className="text-2xl font-bold text-gray-900 dark:text-white mb-4 text-center">
-        COVID VACCINATION CENTER
+        LIBRARY MANAGEMENT
       </h5>
       <div className="flex flex-col items-center justify-center min-h-screen">
         <Card className="w-full md:max-w-2xl p-8 m-4">

@@ -19,7 +19,7 @@ const Home = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('http://localhost:8081/api/all-books');
+        const response = await axios.get('https://library-management-system-fnmi.onrender.com//api/all-books');
         setAllBooks(response.data.books);
         setFilteredBooks(response.data.books);
       } catch (error) {
