@@ -74,7 +74,7 @@ export default function Signup() {
   return (
     <div>
       <h5 className="text-2xl font-bold text-gray-900 dark:text-white mb-4 text-center">
-        LIBRARY MANAGEMENT
+        COVID VACCINATION CENTER
       </h5>
       <div className="flex flex-col items-center justify-center min-h-screen">
         <Card className="w-full md:max-w-2xl p-8 m-4">
