@@ -14,6 +14,7 @@ const Home = () => {
   const [searchBookTerm, setSearchBookTerm] = useState('');
   const [searchGenreTerm, setSearchGenreTerm] = useState('');
   const [searchPublisherTerm, setSearchPublisherTerm] = useState('');
+
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -69,7 +70,7 @@ const Home = () => {
     setSearchAuthorTerm(''); setSearchBookTerm(''); setSearchGenreTerm(''); setSearchPublisherTerm('');
     setFilteredBooks(allBooks);
   };
-
+ 
   return (
     <div>
       <h5 className="text-2xl font-bold text-gray-900 dark:text-white mb-4 text-center">
